@@ -13,7 +13,7 @@ package modelo;
 
 import java.time.LocalDate;
 
-public class Docentes {
+public class Docentes  {
     private String codigo;
     private String nombre;
     private LocalDate fechaNacimiento;
@@ -21,7 +21,7 @@ public class Docentes {
     private double talla;
     private String correo;
 
-    // Constructor, Getters y Setters
+    // Constructor
     public Docentes(String codigo, String nombre, LocalDate fechaNacimiento, String direccion, double talla, String correo) {
         this.codigo = codigo;
         this.nombre = nombre;
@@ -31,7 +31,41 @@ public class Docentes {
         this.correo = correo;
     }
 
-    // Getters y Setters...
-}
+    // Getters
+    public String getCodigo() {
+        return codigo;
+    }
 
-    
+    public String getNombre() {
+        return nombre;
+    }
+
+    public LocalDate getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public double getTalla() {
+        return talla;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    // Opcional: toString() para mostrar mejor en consola
+    @Override
+    public String toString() {
+        return "Docente{" +
+                "codigo='" + codigo + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", fechaNacimiento=" + fechaNacimiento +
+                ", direccion='" + direccion + '\'' +
+                ", talla=" + talla +
+                ", correo='" + correo + '\'' +
+                '}';
+    }
+}
